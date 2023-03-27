@@ -8,7 +8,6 @@ public class TeacherInformation extends StudentInformation {
     public void input() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("name gender id major phone address age class:");
-        String class1 = scanner.next();
         name = scanner.next();
         gender = scanner.next();
         id = scanner.next();
@@ -16,6 +15,7 @@ public class TeacherInformation extends StudentInformation {
         phone = scanner.next();
         address = scanner.next();
         age = String.valueOf(scanner.nextInt());
+        String class1 = scanner.next();
         classes.add(class1);
     }
 

@@ -45,6 +45,7 @@
 
    4.3 系统的使用说明
 
+5. 总结
 
 
 # 1. 系统概述
@@ -167,43 +168,27 @@ classes：教师教学班级，数据类型为string
 
 系统的总体模块图如下：
 
-![img](file:///C:/Users/DELL/AppData/Local/Temp/msohtmlclip1/01/clip_image005.jpg)
-
 我主要负责第一个模块教师信息类及其相应的功能，那么接下来我将详细的对该部分进行阐述，对于教师信息类的介绍在第二部分已经进行了详细的阐述，我这一部分我将详细介绍教师信息类的功能的介绍。
 
 我负责的这个部分主要实现以下几个功能：将教师信息输入容器函数Teacher_input()，增加函数Teacher_add()，删除函数Teacher_delete()，查找函数Teacher_find()，修改函数Teacher_change()，显示函数Teacher_information()、Teacher_information_All()。下面将详细介绍以上的功能：
 
 （1）（1）将教师信息输入容器函数Teacher_input():定义了一个学生信息类的变量teacher,同时定义一个int型变量n,用于用户输入需要存储几个教师的信息，利用for循环，在for循环调用教师信息类的成员函数input()输入教师信息，同时调用push_back()函数将teacher变量放入容器中，每循环一次放入一个教师信息，直到将n个学生信息全部存入容器中。
 
-![img](file:///C:/Users/DELL/AppData/Local/Temp/msohtmlclip1/01/clip_image007.gif)
-
 （2）增加函数Teacher_add()：增加一个教师的信息，定义一个临时教师信息类变量teacher,调用教师信息类的成员函数input(),输入要增加的教师的信息，并将其放入容器中。
-
-![img](file:///C:/Users/DELL/AppData/Local/Temp/msohtmlclip1/01/clip_image009.gif)
 
 （3）删除函数Teacher_delete()：删除用户想要删除的教师信息，以教师编号为索引，用户输入想要删除的教师的教师编号，利用for循环找到该教师并将其删除，定义一个int 型变量f，将其初始值设置为0，若删除成功则f变为1，若f依旧为0则表示删除失败。
 
-![img](file:///C:/Users/DELL/AppData/Local/Temp/msohtmlclip1/01/clip_image011.gif)
-
 （4）查找函数Teacher_find()：查找教师信息，以教师编号为索引，用户输入想要查找的教师的教师编号对其进行查找，定义一个int 型变量f，将其初始值设置为0，若查找成功则f变为1，若f依旧为0则表示查找失败，查找成功调用成员函数output()，对该学生信息输出。
-
-![img](file:///C:/Users/DELL/AppData/Local/Temp/msohtmlclip1/01/clip_image013.gif)
 
 （5）修改函数Teacher_change():修改学生信息，同样以教师编号作为索引，当找到需要修改的教师后调用教师信息类的成员函数change()进行修改，定义一个int 型变量f，将其初始值设置为0，若修改成功则f变为1，若f依旧为0则表示修改失败。
 
-![img](file:///C:/Users/DELL/AppData/Local/Temp/msohtmlclip1/01/clip_image015.gif)
-
 （6）显示函数Teacher_information_All()：显示教师信息，显示全部教师信息。
-
-![img](file:///C:/Users/DELL/AppData/Local/Temp/msohtmlclip1/01/clip_image017.gif)
 
 ## 3.2 系统数据处理的设计
 
 教师信息的数据处理如下：在菜单界面选择输入教师信息的功能后，输入想要输入的教师的个数，最后输入教师的基本信息，此时教师信息就会放入教师信息的容器中。
 
 若放入容器成功将会出现“Teacher information added successfully!”在系统中定义了教师信息容器vector<Teacher_Information> Teacher_information，用于将全部教师信息放入该容器中，在输入教师信息后，就会调用push_back()，将教师放入容器中。在增加、删除、修改、查找函数中的数据处理也是对容器中的数据进行处理。
-
-![img](file:///C:/Users/DELL/AppData/Local/Temp/msohtmlclip1/01/clip_image019.gif)
 
 数据存储也是由我负责，下面我将详细介绍以下实现数据存储有关的内容 ：在菜单界面选择18即可实现将学生信息、学生成绩信息、教师信息均存入文件中，在实现这部分代码时，利用了for()循环，用于将信息一行一行的写入到文件中，当全部写入后，实现功能时，例如修改、增加等会调用clear（）函数将文件内容清空，用于保持数据的独一性，然后将修改后的文件写入。
 
@@ -230,13 +215,6 @@ classes：教师教学班级，数据类型为string
 解决方法：多出的哪一行数据是由于换行符的原因导致额，调用pop_back（），将最后一行内容删除，保持数据的完整性和准确性。
 
 ## 4.3 系统的使用说明
-
- 
-
-|      |                                                              |
-| ---- | ------------------------------------------------------------ |
-|      | ![img](file:///C:/Users/DELL/AppData/Local/Temp/msohtmlclip1/01/clip_image021.gif) |
-
 
 系统主界面如图所示： 
 
