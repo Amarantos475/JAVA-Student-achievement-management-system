@@ -53,7 +53,6 @@ public class StudentInformation {
 
     public void change() {
         Scanner scanner = new Scanner(System.in);
-        int x;
         System.out.println("Please enter the information number you want to modify:");
         System.out.println("1.name");
         System.out.println("2.gender");
@@ -63,7 +62,7 @@ public class StudentInformation {
         System.out.println("6.address");
         System.out.println("7.age");
         System.out.println("8.class");
-        x = scanner.nextInt();
+        int x = scanner.nextInt();
         switch (x) {
             case 1 -> {
                 System.out.println("Please enter your modified name:");

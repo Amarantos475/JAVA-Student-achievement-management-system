@@ -63,7 +63,6 @@ public class TeacherInformation extends StudentInformation {
     }
 
     public void change() {
-        int x;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter the information number you want to modify:");
         System.out.println("1.name");
@@ -75,7 +74,7 @@ public class TeacherInformation extends StudentInformation {
         System.out.println("7.age");
         System.out.println("8.add class");
         System.out.println("9.delete class");
-        x = scanner.nextInt();
+        int x = scanner.nextInt();
         switch (x) {
             case 1 -> {
                 System.out.println("Please enter your modified name:");

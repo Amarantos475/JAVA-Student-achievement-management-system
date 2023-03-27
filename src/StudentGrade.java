@@ -14,11 +14,10 @@ public class StudentGrade {
 
     public void studentGradeChange() {
         Scanner scanner = new Scanner(System.in);
-        int x;
         System.out.println("1.chinese grade");
         System.out.println("2.math grade");
         System.out.println("3.english grade");
-        x = scanner.nextInt();
+        int x = scanner.nextInt();
         System.out.println("Please enter the grade you want to modify");
         switch (x) {
             case 1 -> chinese = scanner.nextInt();
