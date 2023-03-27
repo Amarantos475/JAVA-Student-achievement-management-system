@@ -4,7 +4,12 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("If there is no initial data, proceed and the file is automatically created");
         FileManipulation.readData();
-        while (true) menu();
+        Scanner scanner = new Scanner(System.in);
+        while (true) {
+            menu();
+            System.out.println("Please press Enter to continue");
+            scanner.nextLine();
+        }
     }
     public static void menu() {
         System.out.println("*===============================================================================================*");
