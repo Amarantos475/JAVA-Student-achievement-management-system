@@ -117,11 +117,11 @@ public class TeacherInformation extends StudentInformation {
     }
 
     public static void teacherInput() {
-        TeacherInformation teacher = new TeacherInformation();
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter the number of teacher information you want to enter:");
         int n = scanner.nextInt();
         for (int i = 1; i <= n; i++) {
+            TeacherInformation teacher = new TeacherInformation();
             teacher.input();
             teacherInformation.add(teacher);
         }

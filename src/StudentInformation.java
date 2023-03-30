@@ -100,11 +100,12 @@ public class StudentInformation {
     }
 
     public static void studentInput() {
-        StudentInformation stu = new StudentInformation();
+//        StudentInformation stu = new StudentInformation();
         System.out.println("Please enter the number of student information you want to enter:");
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
         for (int i = 1; i <= n; i++) {
+            StudentInformation stu = new StudentInformation();
             stu.input();
             studentInformation.add(stu);
         }
